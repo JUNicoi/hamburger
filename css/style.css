@@ -1,0 +1,49 @@
+/* ハンバーガーメニュー設定 */
+/* 四角の部分 */
+.openbtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: gainsboro;
+}
+
+/* ３本線 */
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  width: 45%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+}
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+/* ×に変化 */
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
